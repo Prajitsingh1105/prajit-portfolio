@@ -1,7 +1,10 @@
 import React from 'react';
 import { projectsData } from '../data/content';
+import { Link } from 'react-router-dom';
 
-const Portfolio = () => {
+const Portfolio = ({ limit }) => {
+  const displayedProjects = limit ? projectsData.slice(0, limit) : projectsData;
+
   return (
     <section id="portfolio" className="py-[120px] reveal">
       <div className="flex items-center gap-4 mb-16">
@@ -12,7 +15,7 @@ const Portfolio = () => {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projectsData.map((project) => (
+        {displayedProjects.map((project) => (
           <div key={project.id} className="glass-card rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300 flex flex-col h-full">
             <div className="relative h-64 overflow-hidden">
               <img 
@@ -26,10 +29,10 @@ const Portfolio = () => {
               <div className="flex justify-between items-start mb-4">
                 <p className="font-mono text-primary text-sm">Featured Project</p>
                 <div className="flex gap-3">
-                  <a href={project.links.github} className="text-secondary hover:text-primary">
+                  <a href={project.links.github} target="_blank" rel="noreferrer" className="text-secondary hover:text-primary">
                     <span className="material-symbols-outlined text-[20px]">code</span>
                   </a>
-                  <a href={project.links.live} className="text-secondary hover:text-primary">
+                  <a href={project.links.live} target="_blank" rel="noreferrer" className="text-secondary hover:text-primary">
                     <span className="material-symbols-outlined text-[20px]">open_in_new</span>
                   </a>
                 </div>
@@ -45,6 +48,14 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
+
+      {limit && (
+        <div className="mt-16 flex justify-center">
+          <Link to="/projects" className="px-8 py-3 border border-primary text-primary rounded-full hover:bg-primary/10 transition-colors font-mono">
+            View All Projects
+          </Link>
+        </div>
+      )}
     </section>
   );
 };

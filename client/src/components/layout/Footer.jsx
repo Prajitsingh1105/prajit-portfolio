@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#0c0f10] w-full rounded-t-xl border-t border-white/5 flex flex-col md:flex-row justify-between items-center py-6 px-6 max-w-[1140px] mx-auto mt-24 mb-4 md:mb-0 relative z-50">
       <a href="#home" className="font-display text-2xl font-bold text-primary mb-4 md:mb-0 opacity-80 hover:opacity-100 transition-opacity">
-        &lt;/Prajit&gt;
+        &lt;Prajit /&gt;
       </a>
       
       {/* Mobile Social Links */}

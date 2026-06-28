@@ -1,8 +1,11 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export const useScrollReveal = () => {
+  const location = useLocation();
+
   useEffect(() => {
-    const reveals = document.querySelectorAll(".reveal");
+    let reveals = [];
     
     const revealOnScroll = () => {
       const windowHeight = window.innerHeight;
@@ -16,9 +19,19 @@ export const useScrollReveal = () => {
       });
     };
     
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // Trigger on load
+    const initReveal = () => {
+      reveals = document.querySelectorAll(".reveal");
+      revealOnScroll();
+    };
     
-    return () => window.removeEventListener("scroll", revealOnScroll);
-  }, []);
+    // Ensure the DOM has updated for the new route
+    const timer = setTimeout(initReveal, 50);
+
+    window.addEventListener("scroll", revealOnScroll);
+    
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", revealOnScroll);
+    };
+  }, [location.pathname]);
 };
