@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #1a2332;
+  --color-primary: #ff4c60;
+  --color-surface: #1d2022;
+  --color-on-surface: #e1e2e4;
+  --color-secondary: #bec7db;
+  --color-on-surface-variant: #e3bebe;
+  
+  --font-sans: "Nunito Sans", sans-serif;
+  --font-display: "Nunito Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  }
+  
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .timeline-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-50%);
+  }
+  
+  @media (max-width: 768px) {
+    .timeline-line::before {
+      left: 16px;
+      transform: none;
+    }
+  }
+}
+
+body {
+  @apply bg-background text-on-surface font-sans selection:bg-primary selection:text-white;
+}
