@@ -1,11 +1,13 @@
+import CSED from "../assets/CSED.png";
+
 export const projectsData = [
   {
-    id: "sprintern",
-    title: "Sprintern",
-    description: "A comprehensive internship portal connecting students with tech opportunities. Features include real-time tracking, glassmorphic UI elements, and a robust MERN backend to handle application workflows.",
-    tags: ["React", "Node.js", "MongoDB"],
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDsbVvqMqRNtC-AlTLHtLCzTMXuGoJWpL1lg1NhNN6NAmNuKZ913-QK-jgFajWXIgTGPYcHVpZ4D8MM5q5xpHxijI_NObFTw8wfZyToniElKuGmS0lxqHH3LHpxargalfpi-SfBvC6eiDyPMzqN66KHHmbipdMC1VJRLGlslZIpd0YSvmC3lTr09YTImm3o9TRi-yhZFrzWu-AusvBkPAeGnLE5GgatI6Pjtap_oerxGcY_f3QogWcWUQ8giCg3sR9tUBNhRvY3ywZE",
-    links: { github: "#", live: "#" }
+    id: "csed",
+    title: "CSED Placement Portal",
+    description: "Official portal for the Computer Science and Engineering Department at IET Lucknow.",
+    tags: ["React", "Node.js", "MongoDB", "OAuth"],
+    image: `${CSED}`,
+    links: { github: "https://github.com/Prajitsingh1105/csed_site", live: "https://csed.placement.ietlucknow.ac.in/" }
   },
   {
     id: "flasheats",
