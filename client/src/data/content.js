@@ -1,4 +1,5 @@
 import CSED from "../assets/CSED.png";
+import groksblog from "../assets/GroksBlog.png";
 
 export const projectsData = [
   {
@@ -10,12 +11,12 @@ export const projectsData = [
     links: { github: "https://github.com/Prajitsingh1105/csed_site", live: "https://csed.placement.ietlucknow.ac.in/" }
   },
   {
-    id: "flasheats",
-    title: "Flasheats",
-    description: "A lightning-fast food delivery web app focusing on seamless UX and quick ordering constraints. Implemented dynamic state management and a beautifully minimal interface.",
-    tags: ["Next.js", "Tailwind", "Stripe"],
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPvsWAMPIe0AjPo9E9seoFsDRuRTVEbqIXoYt_aP_X0tkeKob3-fg-Z1W3kWMo_e-R-xqNN_9s0iNgMW_uBz5yAj_wq2_QIKA6rM_nHfN-MIrEDYCySWRqbJ9Sk3tPhd5ru6WmlFWPkjWLpd4xhKc61xfMRHNjA1QCwTOLZvQboLJIK1MVQyLNDEXcTCVYbZeJCJqF9m-T14aLSJiCAgMW8Xbh_Rn8nfBsXKa2GKY0KbuNCxTFTOurtsU2KVQg73B1z6hCi9lnDbIH",
-    links: { github: "#", live: "#" }
+    id: "NewsForge",
+    title: "GroksBlog",
+    description: "Developed during my internship, this full-stack, production-ready news platform is built with Next.js and MongoDB, featuring a custom admin CMS.",
+    tags: ["Next.js", "Tailwind", "Express"],
+    image: `${groksblog}`,
+    links: { github: "https://github.com/Prajitsingh1105/NewsForge", live: "https://www.groksblog.com/" }
   },
   {
     id: "taskmaster",
