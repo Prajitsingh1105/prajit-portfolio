@@ -1,5 +1,6 @@
 import CSED from "../assets/CSED.png";
 import groksblog from "../assets/GroksBlog.png";
+import FlashEats from "../assets/FlashEats.png";
 
 export const projectsData = [
   {
@@ -19,12 +20,12 @@ export const projectsData = [
     links: { github: "https://github.com/Prajitsingh1105/NewsForge", live: "https://www.groksblog.com/" }
   },
   {
-    id: "taskmaster",
-    title: "TaskMaster Pro",
-    description: "A sleek project management tool with Kanban boards, real-time collaboration, and time tracking. Designed with a dark-mode first approach.",
-    tags: ["Vue.js", "Firebase", "Vuex"],
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCmni944qZvt55mRcGl9P55ySn5CDCqtegbDaNtmBvFDn2NPBxmtp2xO3znqR-TLjsjKexGDQfQr2OdmaaqVPLt6DahkrCRLInuxjhtnxATyaP-HGIWGqegqdc9FQZwLx9BbXsn7moOqiY7Smi7SKp3LdMcs72x1TsWSgyoUvC6xGsCdxPU7CmVHUyW8pPbIILRbNgj4rzfK_LuWrwUCoD0g3J5glT0I5iA5oUeouaBRCL6A6vDNNFSveupPP0mp1uR1asaSvwaabvC",
-    links: { github: "#", live: "#" }
+    id: "flasheats",
+    title: "FlashEats",
+    description: "FlashEats – A full-stack canteen management system designed to eliminate queues, streamline food ordering, and improve campus dining experience.",
+    tags: ["React", "OAuth", "SendGrid","AWS"],
+    image: `${FlashEats}`,
+    links: { github: "https://github.com/Prajitsingh1105/canteen-management-system", live: "#" }
   },
   {
     id: "weatherapp",
